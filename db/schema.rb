@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20171114171254) do
     t.string "title"
     t.string "link"
     t.string "author"
-    t.integer "points"
+    t.integer "points", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

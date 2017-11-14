@@ -1,4 +1,13 @@
 @import "bootstrap";
+a {
+  color: black;
+  text-decoration: none;
+  &:hover {
+    color: black;
+    text-decoration: none;
+  }
+}
+
 .bg-secondary {
   background-color: #FF6600 !important;
   height: 30px !important;
@@ -33,4 +42,11 @@
   color: black;
   text-decoration: none;
   font-size: 16px;
+}
+
+#comments-link {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }

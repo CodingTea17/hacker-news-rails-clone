@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HackerNews</title>
+    <title>Hacker News</title>
+    <%= favicon_link_tag 'favicon.ico' %>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -12,8 +13,8 @@
     <div class="container">
       <nav class="navbar navbar-light bg-secondary mt-4">
         <div class="row ml-1">
-          <img id="y" src="https://news.ycombinator.com/y18.gif">
-          <span id="hackernews">Hacker News</span> | new | comments | show | ask | jobs | submit
+          <%= image_tag "y18.gif", :id => "y" %>
+          <span id="hackernews" class="mr-1">Hacker News</span> | new | comments | show | ask | jobs | <%= link_to "submit", new_post_path, :class => "ml-1 text-black" %>
         </div>
       </nav>
       <%= yield %>

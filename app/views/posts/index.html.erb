@@ -1,7 +1,7 @@
 <div class="card card-body">
   <ol>
     <% @posts.each do |post| %>
-      <li><%= image_tag "up-arrow.png", :id => "arrow" %><a href="<%= post.link %>" id="post-title"><%= post.title %></a></li>
+      <li><%= image_tag "up-arrow.png", :id => "arrow" %><a href="<%= post.link %>" id="post-title"  class="mr-1"><%= post.title %></a>| <%= link_to "comments", post_path(post), :id => "comments-link" %></li>
       <small class="text-muted"> <%= post.points %> points by <%= post.author %> | <%= post.created_at.strftime("%b. %d @%l:%M %p")%></small>
     <% end %>
   </ol>
