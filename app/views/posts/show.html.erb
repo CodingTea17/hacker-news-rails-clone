@@ -1,3 +1,20 @@
-<h1><%= @post.title %></h1>
-
-<p><%= link_to "Return to Posts", posts_path %></p>
+<div class="card card-body">
+  <h3>Comments for <%= @post.title %></h3>
+  <p><%= link_to "Add a comment", new_post_comment_path(@post) %></p>
+  <% if @post.comments.any? %>
+    <ul>
+      <% @post.comments.each do |comment| %>
+        <li>
+          <%= image_tag "up-arrow.png", :id => "arrow" %>
+          <%= comment.comment %>
+        </li>
+        <small class="text-muted">
+          <%= comment.points %> points by <%= comment.author %> | <%= comment.created_at.strftime("%b. %d @%l:%M %p")%>
+        </small>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>There are no comments yet!</p>
+  <% end %>
+  <p><%= link_to "Return to Posts", posts_path %></p>
+</div>

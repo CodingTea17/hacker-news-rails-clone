@@ -5,4 +5,6 @@ describe Post do
   it { should validate_presence_of :link }
   it { should validate_presence_of :points }
   it { should validate_presence_of :author }
+
+  it { should have_many :comments }
 end

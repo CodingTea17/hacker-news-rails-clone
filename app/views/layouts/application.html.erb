@@ -13,8 +13,8 @@
     <div class="container">
       <nav class="navbar navbar-light bg-secondary mt-4">
         <div class="row ml-1">
-          <%= image_tag "y18.gif", :id => "y" %>
-          <span id="hackernews" class="mr-1">Hacker News</span> | new | comments | show | ask | jobs | <%= link_to "submit", new_post_path, :class => "ml-1 text-black" %>
+          <a href="/"><%= image_tag "y18.gif", :id => "y" %></a>
+          <a href="/" id="hackernews" class="mr-1">Hacker News</a> | new | comments | show | ask | jobs | <%= link_to "submit", new_post_path, :class => "ml-1 text-black" %>
         </div>
       </nav>
       <%= yield %>
